@@ -4,7 +4,7 @@
 #### 下载　ubuntu-17.04-desktop-amd64.iso:　[https://pan.baidu.com/s/1HEd4IOXHRs4Ig3oAisvRXA](https://pan.baidu.com/s/1HEd4IOXHRs4Ig3oAisvRXA "")
 #### 实验目标: 安装linux,　熟悉linux常用命令
 
-## 1. vmware 安装，选择默认安装即可
+## 1.     vmware 安装，选择默认安装即可
 
 ## ２.　打开vmware, 新建虚拟机
 ![image](./images/1新建虚拟机.png)
