@@ -1,7 +1,8 @@
-## 环境准备 
-### window7
-### 下载　VMware-workstation_full_12.2.0.1269.exe: 　[https://pan.baidu.com/s/1QLDz9LZboLcwvzsWSMuwXg](https://pan.baidu.com/s/1QLDz9LZboLcwvzsWSMuwXg "")
-### 下载　ubuntu-17.04-desktop-amd64.iso:　[https://pan.baidu.com/s/1HEd4IOXHRs4Ig3oAisvRXA](https://pan.baidu.com/s/1HEd4IOXHRs4Ig3oAisvRXA "")
+### 环境准备 
+#### window7
+#### 下载　VMware-workstation_full_12.2.0.1269.exe: 　[https://pan.baidu.com/s/1QLDz9LZboLcwvzsWSMuwXg](https://pan.baidu.com/s/1QLDz9LZboLcwvzsWSMuwXg "")
+#### 下载　ubuntu-17.04-desktop-amd64.iso:　[https://pan.baidu.com/s/1HEd4IOXHRs4Ig3oAisvRXA](https://pan.baidu.com/s/1HEd4IOXHRs4Ig3oAisvRXA "")
+#### 实验目标: 安装linux,　熟悉linux常用命令
 
 ## 1. vmware 安装，选择默认安装即可
 
@@ -23,3 +24,12 @@
 ## ７.　等待安装完成，登录
 ![image](./images/6安装完成，使用第三步设置的密码登录.png)
 ![image](./images/7完成.png)
+
+## 8. linux 常用命令熟悉
+```
+vim
+cat
+tail
+netstat
+．．．．．．
+```
