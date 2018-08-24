@@ -1,0 +1,50 @@
+### 环境准备 
+#### linux, cloudera manager
+#### 实验目标: 
+##### 1. 学习sqoop的使用
+
+
+```
+mysql:
+userName: root
+password: cloudera
+```
+
+## 1. sqoop 基本命令：列出mysql数据库中的所有数据库
+```
+sqoop list-databases --connect jdbc:mysql://127.0.0.1:3306?useSSL=false --username root --password cloudera
+```
+
+## 2. 列出cm库中所有的表
+```
+sqoop list-tables --connect jdbc:mysql://127.0.0.1:3306/cm --username root --password cloudera
+```
+
+## 3. mysql数据导入sqoop
+```
+# 创建mysql  数据库
+create database test_sqoop;
+
+# 创建mysql 表
+create table table_test1(mydata varchar(255));
+
+# mysql 插入测试数据
+insert into table_test1(mydata) values('test_data');
+
+# 创建hive 表
+create table test_sqoop
+(
+mydata string
+)
+
+# mysql 导入hive
+sqoop import --connect jdbc:mysql://127.0.0.1:3306/test_sqoop?useSSL=false --username root --password cloudera --table table_test1 --hive-import --hive-table mydb.test_sqoop -m 1
+```
+
+
+## 4. hive 导入 mysql
+```
+sqoop export --connect jdbc:mysql://127.0.0.1:3306/test_sqoop?useSSL=false --username root --password cloudera --table table_test1 --export-dir /user/hive/warehouse/mydb.db/test_sqoop -m 1
+```
+
+## 备注: sqoop 手册： http://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html
