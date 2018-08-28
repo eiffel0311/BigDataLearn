@@ -1,0 +1,13 @@
+### 环境准备 
+#### linux
+#### 下载 flume-ng-1.6.0-cdh5.13.x.tar.gz: 1. 文件共享;  2. https://www.cloudera.com/documentation/enterprise/release-notes/topics/cdh_vd_cdh_package_tarball_513.html
+#### 实验目标: 
+##### 1. 安裝kafka
+##### 2. 加深理解kafka概念
+##### 3. 学习kafka的基本操作
+
+## 1.  解压 kafka
+
+## 2. 打开[test_flume(./test_flume) 修改flume-conf.prpperties, init.sh 尝试把数据从文件读入消息队列
+
+## 3. 打开[test_flume(./test_flume2) 修改flume-conf.prpperties, init.sh 尝试把数据写入hdfs
