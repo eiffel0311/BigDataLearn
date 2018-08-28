@@ -76,7 +76,8 @@
 
           概念
 
-          原理
+          原理: map, reduce, shuffle, partition, combinner
+
     3.4 yarn
 
     3.5 其他
