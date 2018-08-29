@@ -122,14 +122,18 @@
 
    4.2 数据收集技术
         4.2.1 sqoop
+        
         4.2.2 shell
+        
         4.2.3 埋点
               js
               app
               胖客户端
+              
         4.2.4 logstash
               flume
               kafka
+              
         4.2.4 日志备份
 
 2. kafka
