@@ -132,16 +132,100 @@
               kafka
         4.2.4 日志备份
 
-5. kafka
+2. kafka
 
-   实验4: kafka 安装测试
+  2.1 kafka产生背景、使用场景
+  
+  2.2 kafka 特点
+  
+  2.3 kafka 设计
+  
+       文件分段
+       partition
+       message
+       文件索引，index
+        
+  2.4 传统消息队列对比
+  
+  2.5 kafka 架构
+  
+  2.6 kafka 基本概念
+  
+       topic
+       partition
+         高并发
+         数据量
+       broker
+         大力节点， 可批量写入
+         无状态
+       producer
+         起步批量处理， 提高效率
+       consumer
+          consumer group
+       message
+          offset
+          massageSize
+          data
+          处理机制：根据index 搜索 log 文件
+         发送机制
+         
+  2.7 kafka事务
+  
+      at-least-once
+      at-most-once
+      exactly-once
 
-6. flume
+  2.8 kafka 存储策略
+  
+      topic -> partition -> segment
+
+  2.9 Kafka的分布式实现
+
+  实验4 kafka安装使用
+
+
+3. flume
+
+  3.1 简介
+  
+  3.2 架构
+  
+      source, sink, channle, interceptor, 可靠性
+      
+  3.3 使用场景
 
    实验5: flume 安装测试
 
-7. spark
+4. spark
 
-   实验6: spark wordCount
+    4.1 简介
+    
+    4.2 特点
+    
+       快速， 通用，高度开放
+       
+    4.3 组件
+    
+        spark sql , ml, streaming, graphx
 
-8. 整个串联
+    4.4 核心概念
+    
+        driver(sparkContext), executor, rdd, 函数（序列化问题）
+
+    4.5 RDD介绍
+    
+        rdd 概念
+        rdd 血缘关系
+
+    4.6 trandformations
+    
+        map
+        结合操作
+        常见tf
+
+    4.7 action
+
+
+    实验6: spark wordCount
+
+5. 整个串联
