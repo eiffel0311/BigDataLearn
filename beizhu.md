@@ -7,7 +7,3 @@ docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 7180:7180 -
 
 /usr/bin/docker-quickstart
 ./cloudera-manager --express
-
-spark-submit --master local[*] --class test.WordCount BigDataLearn-1.0-SNAPSHOT.jar file:///home/cloudera/cm_api.py
-
-spark-submit  --master local[2] --conf spark.dynamicAllocation.enabled=false --driver-java-options "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5555" --conf spark.ui.port=4040 --class test.WordCount BigDataLearn-1.0-SNAPSHOT.jar file:///home/cloudera/cm_api.py
