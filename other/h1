@@ -1,0 +1,47 @@
+host centos7
+192.168.56.116 bd-ds-2
+192.168.56.123 bd-ds-3
+
+1. mysql install
+1.1 install
+wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
+yum -y install mysql57-community-release-el7-10.noarch.rpm
+yum -y install mysql-community-server
+systemctl start  mysqld.service
+1.2
+grep "password" /var/log/mysqld.log
+1.3 change password
+mysql -h 127.0.0.1 -u root -pZVY2u#Grpjl5
+set global validate_password_policy=0;
+set global validate_password_length=1;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
+
+1. 下载cloudera
+1.1
+wget http://archive.cloudera.com/cm5/cm/5/cloudera-manager-centos7-cm5.13.0_x86_64.tar.gz
+1.2
+mkdir /opt/cloudera-manager
+ 1.3
+tar zxvf cloudera-manager-centos7-cm5.13.0_x86_64.tar.gz -C /opt/cloudera-manager
+
+ 2. create user
+ 2.1
+sudo useradd --system --home=/opt/cloudera-manager/cm-5.13.0/run/cloudera-scm-server --no-create-home --shell=/bin/false --comment "Cloudera SCM User" cloudera-scm
+
+mkdir -p /opt/cloudera/parcel-repo
+mkdir -p /opt/cloudera/parcels
+chown -R cloudera-scm:cloudera-scm /opt/cloudera/parcel-repo
+chown -R cloudera-scm:cloudera-scm /opt/cloudera/parcels
+sudo chown -R cloudera-scm:cloudera-scm /opt/cloudera-manager
+
+3. cm database
+create database cm CHARACTER SET utf8;
+grant all on cm.* TO 'cm'@'%' IDENTIFIED BY 'cmcmcm';
+
+
+/opt/cloudera-manager/cm-5.13.0/share/cmf/schema/scm_prepare_database.sh mysql cm cm cmcmcm
+2.2
+sudo mkdir /var/lib/cloudera-scm-server
+sudo chown cloudera-scm:cloudera-scm /var/lib/cloudera-scm-server
+
+
