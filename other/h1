@@ -45,3 +45,6 @@ sudo mkdir /var/lib/cloudera-scm-server
 sudo chown cloudera-scm:cloudera-scm /var/lib/cloudera-scm-server
 
 
+/usr/share/java/mysql-connector-java.jar－＃３＃
+
+
